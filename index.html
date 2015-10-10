@@ -13,15 +13,81 @@
 </head>
 
 <body>
+<!-- Wrapper required for sidebar transitions -->
+  <div class="st-container">
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-main navbar-primary navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="#sidebar-menu" data-effect="st-effect-1" data-toggle="sidebar-menu" class="toggle pull-left visible-xs"><i class="fa fa-ellipsis-v"></i></a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#sidebar-chat" data-toggle="sidebar-menu" data-effect="st-effect-1" class="toggle pull-right visible-xs"><i class="fa fa-comments"></i></a>
+          <a class="navbar-brand" href="#/home">Bullied Haven</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="nav navbar-nav">
+            <li><a href="#/login">Login</a></li>
+            <li><a href="#/dashboard">Dashboard</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden-xs">
+              <a href="#sidebar-chat" data-toggle="sidebar-menu" data-effect="st-effect-1">
+                <i class="fa fa-comments"></i>
+              </a>
+            </li>
+            <!-- User -->
+            <!--<li class="dropdown">
+              <a href="#" class="dropdown-toggle user" data-toggle="dropdown">
+                <img src="images/people/110/guy-5.jpg" alt="Bill" class="img-circle" width="40" /> Bill <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="user-private-profile.html">Profile</a></li>
+                <li><a href="user-private-messages.html">Messages</a></li>
+                <li><a href="login.html">Logout</a></li>
+              </ul>
+            </li>-->
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </div>
 
 	<div ng-view></div>
-
+	
+	
+    <!--Closes st-container-->
+	</div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <strong>Team RamRod</strong> v0.0.1 &copy; Copyright 2015
+    </footer>
+    <!-- // Footer -->
+	
+	<!--Load Vendor Scripts-->
 	<script src="/assets/theme/js/vendor/all.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.6/angular.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-route.js"></script>
+	<script src="/assets/plugins/firebase.js"></script>
+	<script src="/assets/plugins/angular.js"></script>
+	<script src="/assets/plugins/angular-route.js"></script>
+	<script src="/assets/plugins/angularfire.js"></script>
+	<!--End Vendor Scripts-->
+	
+	<!--Load BulliedHavenApp-->
 	<script src="/app/app.js"></script>
+	
+	<!--Register Services-->
+	<script src="/app/components/services/chatService/chatService.js"></script>
+	
+	<!--Register Controllers-->
 	<script src="/app/components/controllers/home-controller.js"></script>
 	<script src="/app/components/controllers/loginController/loginController.js"></script>
+	<script src="/app/components/controllers/dashboard-controller.js"></script>
 </body>
 
 </html>
