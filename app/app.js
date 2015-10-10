@@ -6,21 +6,48 @@ var app = angular.module('bulliedHaven', [
 app.constant('fbConnect', fbConnect());
 
 function fbConnect(){
-	var _root = 'https://bulliedhaven.firebaseio.com/';
-	// var _channels = _root + 'channel/';	
+	var _root = 'https://bulliedhaven.firebaseio.com/';	
 	return {
-		root: _root
-		// channels: {
-		// 	anger: 'anger/',
-		// 	selfHarm: 'self-harm/',
-		// 	depression: 'depression/',
-		// 	suicide: 'suicide/',
-		// 	fear: 'fear/',
-		// 	selfEstem: 'self-estem/',
-		// 	friends: 'friends/',
-		// 	random: 'random/',
-		// 	affirmation: 'affirmation/'
+		root: _root,
+		channels: {
+			anger: {
+				name: 'Anger',
+				url: 'channel/anger/'
+			},
+			selfharm: {
+				name: 'Self Harm',
+				url: 'channel/selfharm/'
+			},
+			depression: {
+				name: 'Depression',
+				url: 'channel/depression/'
+			},
+			suicide: {
+				name: 'Suicide',
+				url: 'channel/suicide/'
+			},
+			fear: {
+				name: 'Fear',
+				url: 'channel/fear/'
+			},
+			selfestem: {
+				name: 'Self Estem',
+				url: 'channel/selfestem/'
+			},
+			friends: {
+				name: 'Friends',
+				url: 'channel/friends/'
+			},
+			random: {
+				name: 'Random',
+				url: 'channel/random/'
+			},
+			affirmation: {
+				name: 'Affirmation',
+				url: 'channel/affirmation/'
+			}
 		}
+	}
 }
 
 app.config(function($routeProvider){
