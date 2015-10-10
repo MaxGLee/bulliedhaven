@@ -9,5 +9,9 @@ app.config(function($routeProvider){
 		.when('/login', {
 			templateUrl: '/app/views/login.html',
 			controller: 'LoginController'
+		})
+		.when('/blog', {
+			templateUrl: '/app/views/blog.html',
+			controller: 'BlogController'
 		});
 })
