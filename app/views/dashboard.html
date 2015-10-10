@@ -1,0 +1,74 @@
+<div ng-include="'/app/views/partials/dashboard/sidebar-left.html'"></div>
+<div ng-include="'/app/views/partials/dashboard/sidebar-right.html'"></div>
+<!-- content push wrapper -->
+<div class="st-pusher" id="content">
+  <!-- sidebar effects INSIDE of st-pusher: -->
+  <!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 -->
+  <!-- this is the wrapper for the content -->
+  <div class="st-content">
+    <!-- extra div for emulating position:fixed of the menu -->
+    <div class="st-content-inner">
+      <nav class="navbar navbar-subnav navbar-static-top margin-bottom-none" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subnav">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="fa fa-ellipsis-h"></span>
+            </button>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="subnav">
+            <ul class="nav navbar-nav ">
+              <li><a href="index.html"><i class="fa fa-fw icon-ship-wheel"></i> Timeline</a></li>
+              <li><a href="user-public-profile.html"><i class="fa fa-fw icon-user-1"></i> About</a></li>
+              <li class="active"><a href="user-public-users.html"><i class="fa fa-fw fa-users"></i> Friends</a></li>
+            </ul>
+            <ul class="nav navbar-nav hidden-xs navbar-right ">
+              <li><a href="#" data-toggle="chat-box">Chat <i class="fa fa-fw fa-comment-o"></i></a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+      </nav>
+      <div class="cover overlay cover-image-full height-300-lg">
+        <img src="images/profile-cover.jpg" alt="cover" />
+        <div class="overlay overlay-full">
+          <div class="v-top">
+            <a href="#" class="btn btn-cover"><i class="fa fa-pencil"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div id="filter">
+          <form class="form-inline">
+            <label>Filter:</label>
+            <select name="users-filter" id="users-filter-select" class="selectpicker" data-style="btn-primary" data-width="auto">
+              <option value="all">All</option>
+              <option value="friends">Friends of Friends</option>
+              <option value="name">by Name</option>
+            </select>
+            <div id="users-filter-trigger">
+              <div class="select-friends hidden">
+                <select name="users-filter-friends" class="selectpicker" data-style="btn-primary" data-live-search="true">
+                  <option value="0">Select Friend</option>
+                  <option value="1">Mary D.</option>
+                  <option value="2">Michelle S.</option>
+                  <option value="3">Adrian Demian</option>
+                </select>
+              </div>
+              <div class="search-name hidden">
+                <input type="text" class="form-control" name="user-first" placeholder="First Last Name" id="name" />
+                <a href="#" class="btn btn-default hidden" id="user-search-name"><i class="fa fa-search"></i> Search</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <a href="#" class="btn btn-default btn-sm">Follow <i class="fa fa-share"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

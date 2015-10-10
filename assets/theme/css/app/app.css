@@ -17047,6 +17047,10 @@ ul.timeline-list .media-.fixed {
   height: 45px;
   line-height: 45px;
   display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .container-fluid .footer {
   margin: 0 -15px;
