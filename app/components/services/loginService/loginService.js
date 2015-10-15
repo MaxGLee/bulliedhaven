@@ -43,7 +43,7 @@ app.service('loginService', function(fbConnect){
 				  if (authData) {
 				  	authData.name = user.name;
 				  	authData.timestamp = Date.now();
-				    firebaseLogin.child('users').child(authData.uid.replace('simplelogin:', '')).set(authData);
+				    firebaseLogin.child('users').child(authData.uid).set(authData);
 				    cb(authData);
 				  } else {
 				  	console.log('something went wrong');
