@@ -1,7 +1,8 @@
 var app = angular.module('bulliedHaven', [
 	'ui.router',
 	'firebase',
-	'firebaseLogin'
+	'firebaseLogin',
+	'luegg.directives'
 	]);
 
 app.constant('fbConnect', fbConnect());
@@ -68,5 +69,12 @@ app.config(function($urlRouterProvider, $stateProvider){
 			url: '/dashboard',
 			templateUrl: '/app/views/dashboard.html',
 			controller: 'DashboardController'
-		});
+		})
+		// .state('mentorForm', {
+		// 	url: '/mentorForm',
+		// 	templateUrl: '/app/views/mentorForm.html',
+		// 	controller: 'MentorFormController'
+		// });
 });
+
+
