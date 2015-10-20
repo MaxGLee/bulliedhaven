@@ -68,5 +68,10 @@ app.config(function($urlRouterProvider, $stateProvider){
 			url: '/dashboard',
 			templateUrl: '/app/views/dashboard.html',
 			controller: 'DashboardController'
+		})
+		.state('mentorReg', {
+			url: '/register/mentor',
+			templateUrl: '/app/views/mentor-registration.html',
+			controller: 'MentorRegController'
 		});
 });
