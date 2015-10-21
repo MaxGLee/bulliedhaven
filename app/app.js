@@ -1,6 +1,7 @@
 var app = angular.module('bulliedHaven', [
-	'ngRoute',
-	'firebase'
+	'ui.router',
+	'firebase',
+	'firebaseLogin'
 	]);
 
 app.constant('fbConnect', fbConnect());
@@ -50,28 +51,27 @@ function fbConnect(){
 	}
 }
 
-app.config(function($routeProvider){
-	$routeProvider
-		.when('/', {
+app.config(function($urlRouterProvider, $stateProvider){
+	$urlRouterProvider.otherwise('/login');
+	$stateProvider
+		.state('home', {
+			url: '/',
 			templateUrl: '/app/views/home.html',
 			controller: 'HomeController'
 		})
-		.when('/login', {
+		.state('login', {
+			url: '/login',
 			templateUrl: '/app/views/login.html',
 			controller: 'LoginController'
 		})
-		.when('/dashboard', {
+		.state('dashboard', {
+			url: '/dashboard',
 			templateUrl: '/app/views/dashboard.html',
 			controller: 'DashboardController'
 		})
-		.when('/timeline', {
-			templateUrl: "/app/views/timeLine.html",
-			controller: 'TimelineController'
-		})
-		.when('/blog', {
-			templateUrl: "/app/views/blog.html",
-			controller: 'BlogController'
+		.state('mentorReg', {
+			url: '/register/mentor',
+			templateUrl: '/app/views/mentor-registration.html',
+			controller: 'MentorRegController'
 		});
-		
-		
 });

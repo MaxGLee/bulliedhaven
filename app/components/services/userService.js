@@ -1,5 +1,5 @@
 app.service('userService', function () {
-  var ref = new Firebase("https://bulliedhaven.firebaseio.com");
+  var ref = new Firebase(fbConnect.root);
   ref.createUser({
     email: "",
     password: ""

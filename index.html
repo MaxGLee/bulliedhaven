@@ -58,7 +58,7 @@
       </div>
     </div>
 
-	<div ng-view></div>
+	<div ui-view></div>
 	
 	
     <!--Closes st-container-->
@@ -74,7 +74,7 @@
 	<script src="/assets/theme/js/vendor/all.js"></script>
 	<script src="/assets/plugins/firebase.js"></script>
 	<script src="/assets/plugins/angular.js"></script>
-	<script src="/assets/plugins/angular-route.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 	<script src="/assets/plugins/angularfire.js"></script>
 	<!--End Vendor Scripts-->
 	
@@ -83,13 +83,13 @@
 	
 	<!--Register Services-->
 	<script src="/app/components/services/chatService/chatService.js"></script>
+  <script src="/app/components/services/loginService/loginService.js"></script>
 	
 	<!--Register Controllers-->
 	<script src="/app/components/controllers/home-controller.js"></script>
 	<script src="/app/components/controllers/loginController/loginController.js"></script>
 	<script src="/app/components/controllers/dashboard-controller.js"></script>
-  <script src="/app/components/controllers/timeline-controller.js"></script>
-  <script src="/app/components/controllers/blog-controller.js"></script>
+  <script src="/app/components/controllers/mentor-reg-controller.js"></script>
 </body>
 
 </html>

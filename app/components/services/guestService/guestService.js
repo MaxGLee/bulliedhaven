@@ -1,4 +1,4 @@
-var ref = new Firebase("https://bulliedHaven.firebaseio.com");
+var ref = new Firebase(fbConnect.root);
 ref.authAnonymously(function(error, authData) {
   if (error) {
     console.log("Login Failed!", error);

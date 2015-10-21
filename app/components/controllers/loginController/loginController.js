@@ -1,17 +1,32 @@
-app.controller('LoginController', LoginController);
+var app = angular.module('firebaseLogin');
 
-function LoginController($scope, $location){
-  $scope.test = 'Hey You From Login'
-  
-  $scope.login = function(){
-    if($scope.user.name && $scope.user.password){
-      // AuthService.login($scope.user).then(function(err, authData){
-      //   if(err){
-      //    return $scope.error = err;
-      //   }
-      //   $location.path('dashboard');
-      // })
+app.controller('LoginController', function ($scope, loginService, $state, $window) {
+
+  $scope.login = function () {
+    return loginService.login($scope.user, function (user) {
+      
+        $state.go('dashboard')
+
+    });
+  };
+
+  $scope.register = function () {
+    return loginService.register($scope.user, function (user) {
+
+        $state.go('dashboard')
+
+    });
+  };
+
+  $scope.status = 'Register';
+  $scope.showReg = function () {
+    if ($scope.status === 'Register') {
+      $scope.status = 'Login';
+    } else {
+      $scope.status = 'Register';
     }
-  }
-  
-}
+    $scope.reg = !$scope.reg;
+  };
+
+
+});
