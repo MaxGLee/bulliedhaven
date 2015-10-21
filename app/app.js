@@ -63,5 +63,15 @@ app.config(function($routeProvider){
 		.when('/dashboard', {
 			templateUrl: '/app/views/dashboard.html',
 			controller: 'DashboardController'
+		})
+		.when('/timeline', {
+			templateUrl: "/app/views/timeLine.html",
+			controller: 'TimelineController'
+		})
+		.when('/blog', {
+			templateUrl: "/app/views/blog.html",
+			controller: 'BlogController'
 		});
+		
+		
 });
