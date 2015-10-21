@@ -8,7 +8,7 @@
           </li>
         </ul>
       </div>
-      <div class="panel-body">
+      <div class="panel-body chat-body" id="chat" scroll-glue>
         <div ng-repeat="chat in chats" style="margin: 40px;">
           {{chat.body}}
           <br> {{chat.timestamp | date}}

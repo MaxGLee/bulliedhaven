@@ -10,39 +10,39 @@
 							<div class="col-md-6">
 								<div class="form-group form-control-default required">
 									<label for="exampleInputFirstName">First name</label>
-									<input type="email" class="form-control" id="exampleInputFirstName" required="true" placeholder="Your first name" ng-model="user.firstName">
+									<input type="name" class="form-control" id="exampleInputFirstName" required="true" placeholder="John" ng-model="user.firstName">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group form-control-default required">
 									<label for="exampleInputLastName">Last name</label>
-									<input type="email" class="form-control" id="exampleInputLastName" required="true" placeholder="Your last name" ng-model="user.lastName">
+									<input type="name" class="form-control" id="exampleInputLastName" required="true" placeholder="Smith" ng-model="user.lastName">
 								</div>
 							</div>
 						</div>
 						<div class="form-group form-control-default required">
 							<label for="exampleInputEmail1">Username</label>
-							<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Username" ng-model="user.username">
+							<input type="text" class="form-control" id="exampleInputEmail1" placeholder="jsmith101" ng-model="user.username">
 						</div>
 						<div class="form-group form-control-default required">
 							<label for="exampleInputEmail1">Email address</label>
-							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" ng-model="user.email">
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="jsmith@example.com" ng-model="user.email">
 						</div>
 						<div class="form-group form-control-default required">
 							<label for="exampleInputPassword1">Password</label>
-							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="user.password">
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="*********" ng-model="user.password">
 						</div>
 						<div class="row">
 							<div class="col-md-9">
 								<div class="form-group form-control-default required">
-									<label for="exampleInputPassword1">Date of Birth</label>
-									<input type="date" class="form-control" ng-model="user.dob">
+									<label for="exampleInputPassword1">Date of Birth | MM/DD/YYYY</label>
+									<input type="date" placeholder="10/1/1994" class="form-control" ng-model="user.dob">
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group form-control-default">
 									<label for="exampleInputPassword1">Age</label>
-									<input type="text" readonly class="form-control" ng-model="user.age">
+									<input type="text" placeholder="21" class="form-control" ng-model="user.age">
 								</div>
 							</div>
 						</div>
@@ -50,27 +50,27 @@
 							<div class="col-md-4">
 								<div class="form-group form-control-default required">
 									<label for="exampleInputPassword1">City</label>
-									<input type="text" class="form-control" placeholder="city" ng-model="user.city">
+									<input type="text" class="form-control" placeholder="Springfield" ng-model="user.city">
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-control-default required">
 									<label for="exampleInputPassword1">State</label>
-									<input type="text" class="form-control" placeholder="state" ng-model="user.state">
+									<input type="text" class="form-control" placeholder="IL" ng-model="user.state">
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group form-control-default required">
 									<label for="exampleInputPassword1">Zip</label>
-									<input type="text" class="form-control" placeholder="zip" ng-model="user.zip">
+									<input type="text" class="form-control" placeholder="62705" ng-model="user.zip">
 								</div>
 							</div>
 						</div>
 						<div class="form-group form-control-default required">
 							<label for="exampleInputPassword1">Info</label>
-							<textarea rows="8" type="text" class="form-control" placeholder="Why do you volunteer?" ng-model="user.info"></textarea>
+							<textarea rows="8" type="text" class="form-control" placeholder="Why would you like to be a Mentor?" ng-model="user.info"></textarea>
 						</div>
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="btn btn-primary" ng-click="">Submit</button>
 					</form>
 				</div>
 			</div>
