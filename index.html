@@ -1,21 +1,21 @@
 <html ng-app="bulliedHaven">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="/assets/theme/css/vendor/all.css">
-	<link rel="stylesheet" href="/assets/theme/css/app/app.css">
-	<!--<link rel="stylesheet" href="/assets/theme/skin-blue.css">
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/assets/theme/css/vendor/all.css">
+  <link rel="stylesheet" href="/assets/theme/css/app/app.css">
+  <!--<link rel="stylesheet" href="/assets/theme/skin-blue.css">
 	<link rel="stylesheet" href="/assets/theme/skin-brown.css">
 	<link rel="stylesheet" href="/assets/theme/skin-orange.css">
 	<link rel="stylesheet" href="/assets/theme/skin-purple.css">-->
-	<link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 
 <body>
-<!-- Wrapper required for sidebar transitions -->
+  <!-- Wrapper required for sidebar transitions -->
   <div class="st-container">
-	<!-- Fixed navbar -->
+    <!-- Fixed navbar -->
     <div class="navbar navbar-main navbar-primary navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -58,39 +58,43 @@
       </div>
     </div>
 
-	<div ui-view></div>
-	
-	
+    <div ui-view></div>
+
+
     <!--Closes st-container-->
-	</div>
-    
-    <!-- Footer -->
-    <footer class="footer">
-      <strong>Team RamRod</strong> v0.0.1 &copy; Copyright 2015
-    </footer>
-    <!-- // Footer -->
-	
-	<!--Load Vendor Scripts-->
-	<script src="/assets/theme/js/vendor/all.js"></script>
-	<script src="/assets/plugins/firebase.js"></script>
-	<script src="/assets/plugins/angular.js"></script>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <strong>Team RamRod</strong> v0.0.1 &copy; Copyright 2015
+  </footer>
+  <!-- // Footer -->
+
+  <!--Load Vendor Scripts-->
+  <script src="/assets/theme/js/vendor/all.js"></script>
+  <script src="/assets/plugins/firebase.js"></script>
+  <script src="/assets/plugins/angular.js"></script>
   <script src="/assets/plugins/scrollglue.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-	<script src="/assets/plugins/angularfire.js"></script>
-	<!--End Vendor Scripts-->
-	
-	<!--Load BulliedHavenApp-->
-	<script src="/app/app.js"></script>
-	
-	<!--Register Services-->
-	<script src="/app/components/services/chatService/chatService.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <script src="/assets/plugins/angularfire.js"></script>
+  <!--End Vendor Scripts-->
+
+  <!--Load BulliedHavenApp-->
+  <script src="/app/app.js"></script>
+
+  <!--Register Services-->
+  <script src="/app/components/services/chatService/chatService.js"></script>
   <script src="/app/components/services/loginService/loginService.js"></script>
-	
-	<!--Register Controllers-->
-	<script src="/app/components/controllers/home-controller.js"></script>
-	<script src="/app/components/controllers/loginController/loginController.js"></script>
-	<script src="/app/components/controllers/dashboard-controller.js"></script>
+  <script src="/app/components/services/guestService/guestService.js"></script>
+  <script src="/app/components/services/userService/userService.js"></script>
+  <script src="/app/components/services/loginService/auth-service.js"></script>
+  
+  <!--Register Controllers-->
+  <script src="/app/components/controllers/home-controller.js"></script>
+  <script src="/app/components/controllers/loginController/loginController.js"></script>
+  <script src="/app/components/controllers/dashboard-controller.js"></script>
   <script src="/app/components/controllers/mentor-reg-controller.js"></script>
+  <script src="/app/components/controllers/auth-controller.js"></script>
 </body>
 
 </html>

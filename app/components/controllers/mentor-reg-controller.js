@@ -11,7 +11,7 @@ function MentorRegController($scope, loginService){
 			} else {
 				$scope.message = "You have succesfully applied to be a Mentor. Your application is under review, and you will be contacted in due time.";
 				$scope.user = '';
-				//TODO: redirect to Dashboard
+				$scope.go('dashboard');
 			}
 		});
 	}
