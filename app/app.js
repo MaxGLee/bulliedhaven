@@ -1,7 +1,8 @@
 var app = angular.module('bulliedHaven', [
 	'ui.router',
 	'firebase',
-	'firebaseLogin'
+	'firebaseLogin',
+	'angular-timeline'
 	]);
 
 app.constant('fbConnect', fbConnect());
@@ -73,5 +74,10 @@ app.config(function($urlRouterProvider, $stateProvider){
 			url: '/register/mentor',
 			templateUrl: '/app/views/mentor-registration.html',
 			controller: 'MentorRegController'
+		})
+		.state('timeline', {
+			url: '/timeline',
+			templateUrl: '/app/views/timeline.html',
+			controller: 'TimelineController'
 		});
 });
