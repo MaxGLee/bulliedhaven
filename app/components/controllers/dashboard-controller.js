@@ -8,7 +8,7 @@ function DashboardController($scope, ChatService) {
 	}
 	$scope.sendChat = function () {
 		if ($scope.newChat) {
-			ChatService.sendChat($scope.newChat);
+			ChatService.sendChat($scope.user, $scope.newChat);
 			$scope.newChat = '';
 		}
 	}

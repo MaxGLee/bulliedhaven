@@ -1,3 +1,4 @@
+<div>{{user}}</div>
 <div class="container" style="margin-top: 100px">
   <div class="row">
     <div class="panel panel-primary">
@@ -11,7 +12,7 @@
       <div class="panel-body chat-body" id="chat" scroll-glue>
         <div ng-repeat="chat in chats" style="margin: 40px;">
           {{chat.body}}
-          <br> {{chat.timestamp | date}}
+          <br>{{chat.username}} {{chat.timestamp | date}} 
         </div>
       </div>
       <div class="panel-footer">

@@ -2,15 +2,24 @@ var app = angular.module('bulliedHaven', [
 	'ui.router',
 	'firebase',
 	'firebaseLogin',
+<<<<<<< HEAD
 	'angular-timeline'
 	]);
+=======
+	'luegg.directives'
+]);
+>>>>>>> 9983a850d03be619c56800b8b9db2bf0b5c166f1
 
 app.constant('fbConnect', fbConnect());
 
-function fbConnect(){
-	var _root = 'https://bulliedhaven.firebaseio.com/';	
+
+// fbConnect used to limit having to hardcode the full url throughout
+// the site
+function fbConnect() {
+	var _root = 'https://bulliedhaven.firebaseio.com/';
 	return {
 		root: _root,
+		db: new Firebase(_root),
 		channels: {
 			anger: {
 				name: 'Anger',
@@ -52,20 +61,21 @@ function fbConnect(){
 	}
 }
 
-app.config(function($urlRouterProvider, $stateProvider){
+// routes for serving all of the views for the site
+app.config(function ($urlRouterProvider, $stateProvider) {
 	$urlRouterProvider.otherwise('/login');
 	$stateProvider
-		.state('home', {
-			url: '/',
-			templateUrl: '/app/views/home.html',
-			controller: 'HomeController'
-		})
 		.state('login', {
 			url: '/login',
 			templateUrl: '/app/views/login.html',
 			controller: 'LoginController'
 		})
-		.state('dashboard', {
+		.state('auth', {
+			abstract: true,
+			template: '<ui-view></ui-view>',
+			controller: 'AuthController'
+		})
+		.state('auth.dashboard', {
 			url: '/dashboard',
 			templateUrl: '/app/views/dashboard.html',
 			controller: 'DashboardController'

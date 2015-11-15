@@ -1,8 +1,9 @@
-var ref = new Firebase(fbConnect.root);
-ref.authAnonymously(function(error, authData) {
-  if (error) {
-    console.log("Login Failed!", error);
-  } else {
-    console.log("Authenticated successfully with payload:", authData);
-  }
+app.service('guestService', function (fbConnect, loginService) {
+	//Just a reference to the firebase endpoint
+	var firebaseUrl = fbConnect.root;
+	//Creates an object using the Firebase Constructor with our endpoint passed in 
+	var firebaseLogin = new Firebase(firebaseUrl);
+	this.anonymousLogin = function () {
+		firebaseLogin.authAnonymously(loginService.anonymousLogin);
+	};
 });

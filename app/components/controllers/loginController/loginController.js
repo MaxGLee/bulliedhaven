@@ -4,8 +4,8 @@ app.controller('LoginController', function ($scope, loginService, $state, $windo
 
   $scope.login = function () {
     return loginService.login($scope.user, function (user) {
-      
-        $state.go('dashboard')
+
+      $state.go('auth.dashboard')
 
     });
   };
@@ -13,7 +13,7 @@ app.controller('LoginController', function ($scope, loginService, $state, $windo
   $scope.register = function () {
     return loginService.register($scope.user, function (user) {
 
-        $state.go('dashboard')
+      $state.go('auth.dashboard')
 
     });
   };
@@ -28,5 +28,11 @@ app.controller('LoginController', function ($scope, loginService, $state, $windo
     $scope.reg = !$scope.reg;
   };
 
+  $scope.anonymousLogin = function () {
+    return loginService.anonymousLogin($scope.authData, function (authData) {
 
+      $state.go('auth.dashboard')
+      
+    })
+  }
 });
