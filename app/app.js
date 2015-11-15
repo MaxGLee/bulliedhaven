@@ -2,8 +2,13 @@ var app = angular.module('bulliedHaven', [
 	'ui.router',
 	'firebase',
 	'firebaseLogin',
+<<<<<<< HEAD
+	'angular-timeline'
+	]);
+=======
 	'luegg.directives'
 ]);
+>>>>>>> 9983a850d03be619c56800b8b9db2bf0b5c166f1
 
 app.constant('fbConnect', fbConnect());
 
@@ -84,5 +89,10 @@ app.config(function ($urlRouterProvider, $stateProvider) {
 			url: '/register/mentor',
 			templateUrl: '/app/views/mentor-registration.html',
 			controller: 'MentorRegController'
+		})
+		.state('timeline', {
+			url: '/timeline',
+			templateUrl: '/app/views/timeline.html',
+			controller: 'TimelineController'
 		});
 });
