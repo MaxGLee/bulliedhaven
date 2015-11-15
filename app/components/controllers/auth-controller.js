@@ -7,12 +7,5 @@ app.controller('AuthController', function ($scope, authService, $state) {
 	if(!$scope.user){
 		$state.go('login');
 	}
-	
-  // $scope.anonymousLogin = function () {
-    // return guestService.anonymousLogin($scope.authData, function (authData) {
 
-    //   $state.go('dashboard')
-      
-    // })
-  // }
 });

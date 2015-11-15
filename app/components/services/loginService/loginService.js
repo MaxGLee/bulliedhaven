@@ -67,6 +67,7 @@ app.service('loginService', function (fbConnect, $rootScope) {
 		firebaseLogin.authAnonymously(
 			function (err, authData) {
 				if (authData) {
+					//TO DO add/create an anonymous username generator
 					authData.username = "testing";
 					authData.timestamp = Date.now();
 					firebaseLogin.child('users').child(authData.uid).set(authData);

@@ -5,7 +5,6 @@ app.factory('authService', function (fbConnect, $firebaseObject) {
 	var _user;
 	return {
 		isAuthed: function(){
-			debugger;
 			var authData = db.getAuth();
 			if(authData){
 				if(!_user){

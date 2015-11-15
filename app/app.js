@@ -75,6 +75,11 @@ app.config(function ($urlRouterProvider, $stateProvider) {
 			templateUrl: '/app/views/dashboard.html',
 			controller: 'DashboardController'
 		})
+		.state('timeLine', {
+			url: '/timeline',
+			templateUrl: '/app/views/timeLine.html',
+			controller: 'TimelineController'	
+		})
 		.state('mentorReg', {
 			url: '/register/mentor',
 			templateUrl: '/app/views/mentor-registration.html',
