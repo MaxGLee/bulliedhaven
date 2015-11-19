@@ -87,9 +87,9 @@ app.config(function ($urlRouterProvider, $stateProvider) {
 			templateUrl: '/app/views/mentor-registration.html',
 			controller: 'MentorRegController'
 		})
-		.state('timeline', {
-			url: '/timeline',
-			templateUrl: '/app/views/timeline.html',
-			controller: 'TimelineController'
+		.state('blog', {
+			url: '/blog',
+			templateURL: '/app/views/blog.html',
+			controller: 'blog-controller'
 		});
 });
