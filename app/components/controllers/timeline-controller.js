@@ -1,7 +1,7 @@
 app.controller('TimelineController', TimelineController);
 
 
-function TimelineController($scope){
+function TimelineController($scope, TimelineService){
 	$scope.test = "Hello From Timeline";
 	$scope.events = [{
     badgeClass: 'info',
