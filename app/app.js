@@ -74,13 +74,18 @@ app.config(function ($urlRouterProvider, $stateProvider) {
 		})
 		.state('auth.dashboard', {
 			url: '/dashboard',
-			templateUrl: '/app/views/dashboard.html',
-			controller: 'DashboardController'
+			views: {
+				'chat@': {
+					templateUrl: '/app/views/chat.html',
+					controller: 'DashboardController'
+				}
+			}
+
 		})
 		.state('timeLine', {
 			url: '/timeline',
 			templateUrl: '/app/views/timeLine.html',
-			controller: 'TimelineController'	
+			controller: 'TimelineController'
 		})
 		.state('mentorReg', {
 			url: '/register/mentor',

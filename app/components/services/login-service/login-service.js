@@ -14,7 +14,7 @@ app.service('loginService', function (fbConnect, $rootScope) {
 			email: user.email,    //Email and Password come from our login form 
 			password: user.password
 		}, function (err, authData) {
-			debugger;
+
 			if (err) {
 				switch (err.code) {
 					case "INVALID_EMAIL":
@@ -36,7 +36,7 @@ app.service('loginService', function (fbConnect, $rootScope) {
 			email: user.email,
 			password: user.password
 		}, function (error) {
-			debugger;
+
 			if (!error) {
 				console.log("User created successfully");
 				firebaseLogin.authWithPassword({

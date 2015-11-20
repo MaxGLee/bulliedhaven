@@ -2,13 +2,13 @@
 
 <head>
 
-	<meta charset="UTF-8">
-	<title>Bullied Haven | A Safe Place To Be</title>
-	<link rel="stylesheet" href="/assets/theme/css/vendor/all.css">
-	<link rel="stylesheet" href="/assets/theme/css/app/app.css">
+  <meta charset="UTF-8">
+  <title>Bullied Haven | A Safe Place To Be</title>
+  <link rel="stylesheet" href="/assets/theme/css/vendor/all.css">
+  <link rel="stylesheet" href="/assets/theme/css/app/app.css">
   <!--<link rel="stylesheet" href="/assets/plugins/angular-timeline/dist/angular-timeline.css"/>-->
   <link rel="stylesheet" href="/assets/plugins/angular-timeline/dist/angular-timeline-bootstrap.css" />
-	<!--<link rel="stylesheet" href="/assets/theme/skin-blue.css">
+  <!--<link rel="stylesheet" href="/assets/theme/skin-blue.css">
 =======
   <meta charset="UTF-8">
   <title>Bullied Haven | A Safe Place To Be</title>
@@ -71,12 +71,16 @@
       </div>
     </div>
 
-    <div ui-view></div>
+
 
 
     <!--Closes st-container-->
   </div>
+  <div ui-view></div>
+  <div>
 
+    <div ui-view="chat"></div>
+  </div>
   <!-- Footer -->
   <footer class="footer">
     <strong>Team RamRod</strong> v0.0.3 &copy; Copyright 2015
@@ -89,19 +93,17 @@
   <script src="/assets/plugins/angular.js"></script>
   <script src="/assets/plugins/scrollglue.js"></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-	<script src="/assets/plugins/angularfire.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <script src="/assets/plugins/angularfire.js"></script>
   <script src="/assets/plugins/angular-timeline/dist/angular-timeline.js"></script>
 
 
-	<!--End Vendor Scripts-->
-	
-	<!--Load BulliedHavenApp-->
-	<script src="/app/app.js"></script>
-	
-	<!--Register Services-->
-	<script src="/app/components/services/chatService/chatService.js"></script>
+  <!--End Vendor Scripts-->
 
+  <!--Load BulliedHavenApp-->
+  <script src="/app/app.js"></script>
+
+  <!--Load Vendor Scripts-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
   <script src="/assets/plugins/angularfire.js"></script>
   <!--End Vendor Scripts-->
@@ -110,16 +112,16 @@
   <script src="/app/app.js"></script>
 
   <!--Register Services-->
-  <script src="/app/components/services/chatService/chatService.js"></script>
+  <script src="/app/components/services/chat-service/chat-service.js"></script>
 
-  <script src="/app/components/services/loginService/loginService.js"></script>
-  <script src="/app/components/services/guestService/guestService.js"></script>
-  <script src="/app/components/services/userService/userService.js"></script>
-  <script src="/app/components/services/loginService/auth-service.js"></script>
-  
+  <script src="/app/components/services/login-service/login-service.js"></script>
+  <script src="/app/components/services/guest-service/guest-service.js"></script>
+  <script src="/app/components/services/user-service/user-service.js"></script>
+  <script src="/app/components/services/login-service/auth-service.js"></script>
+
   <!--Register Controllers-->
   <script src="/app/components/controllers/home-controller.js"></script>
-  <script src="/app/components/controllers/loginController/loginController.js"></script>
+  <script src="/app/components/controllers/login-controller/login-controller.js"></script>
   <script src="/app/components/controllers/dashboard-controller.js"></script>
   <script src="/app/components/controllers/mentor-reg-controller.js"></script>
 
