@@ -77,6 +77,7 @@ app.service('loginService', function (fbConnect, $rootScope) {
 					authData.username = "testing";
 					authData.timestamp = Date.now();
 					firebaseLogin.child('users').child(authData.uid).set(authData);
+					console.log(authData.username);
 					cb(authData);
 				} else {
 					console.log('something went wrong');

@@ -4,6 +4,9 @@
 
   <meta charset="UTF-8">
   <title>Bullied Haven | A Safe Place To Be</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+  crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/theme/css/vendor/all.css">
   <link rel="stylesheet" href="/assets/theme/css/app/app.css">
   <!--<link rel="stylesheet" href="/assets/plugins/angular-timeline/dist/angular-timeline.css"/>-->
@@ -77,8 +80,10 @@
     <!--Closes st-container-->
   </div>
   <div ui-view></div>
-  <div>
-
+  <div id="channel" class="col-md-2">
+    <div ui-view="channels"></div>
+  </div>
+  <div id="chat" class="col-md-8">
     <div ui-view="chat"></div>
   </div>
   <!-- Footer -->
@@ -96,6 +101,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
   <script src="/assets/plugins/angularfire.js"></script>
   <script src="/assets/plugins/angular-timeline/dist/angular-timeline.js"></script>
+  <script src="/assets/plugins/jquery/dist/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+  crossorigin="anonymous"></script>
 
 
   <!--End Vendor Scripts-->

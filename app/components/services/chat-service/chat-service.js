@@ -1,7 +1,7 @@
 /* global Firebase */
 app.service('ChatService', ChatService);
 
-function ChatService(fbConnect, $firebaseObject, $firebaseArray, Users, loginService, $rootScope) {
+function ChatService(fbConnect, $firebaseObject, $firebaseArray, authService, loginService, $rootScope) {
 	
 	var _currentChannel = _getChannel(fbConnect.channels.anger.name);
 	var _activeChat = fbConnect.channels.anger.name;
@@ -35,7 +35,7 @@ function ChatService(fbConnect, $firebaseObject, $firebaseArray, Users, loginSer
 		}
 		var chat = {
 			body: message,
-			username: user.username,
+			//username: user.username,
 			timestamp: Date.now()
 		}
 		_currentChannel.$add(chat);

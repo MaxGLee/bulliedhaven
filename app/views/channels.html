@@ -1,0 +1,7 @@
+<div class="panel-heading" style="height: 50px;">
+	<ul class="nav nav-tabs">
+		<li role="presentation" ng-repeat="channel in channels" ng-class="{'active': isActive(channel)}">
+			<a ng-click="changeChannel(channel.name)">{{channel.name}}</a>
+		</li>
+	</ul>
+</div>
