@@ -52,7 +52,7 @@ function fbConnect(){
 }
 
 app.config(function($urlRouterProvider, $stateProvider){
-	$urlRouterProvider.otherwise('/login');
+	$urlRouterProvider.otherwise('/');
 	$stateProvider
 		.state('home', {
 			url: '/',
