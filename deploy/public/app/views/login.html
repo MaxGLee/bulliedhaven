@@ -1,0 +1,39 @@
+<div ng-show="authCtrl.error">
+  <span>{{ authCtrl.error.message }}</span>
+</div>
+
+<div class="container" style="padding: 4em;">
+  <div id="content">
+    <div class="row">
+      <div class="lock-container">
+        <h1>Account Access</h1>
+        <div class="panel panel-default text-center" style="margin-left:25%;width:50%;">
+          <div class="panel-body" style="padding:3em;">
+            <form>
+              <span class="login-field">Email</span>
+              <input class="form-control" ng-model="authCtrl.user.email" placeholder="Email" style="margin-bottom: 1.5em;" type="email">
+              <span class="login-field">Password</span>
+              <input class="form-control" ng-model="authCtrl.user.password" placeholder="Password" style="margin-bottom: 1.5em;" type="password">
+              <a class="btn btn-primary" href="#" ng-click="authCtrl.register()">Sign Up
+                <i class=""></i>
+              </a>
+              <a class="btn btn-primary" href="#" ng-click="authCtrl.login()">Login
+                <i class=""></i>
+              </a>
+
+            <form>
+                <div>
+
+                  <a class="forgot-password" href="#">Forgot password?</a>
+                  <br>
+                  <span>
+                    <a class="guestLogin()" href="#" ng-click="anonymousLogin()">Continue as guest</a>
+                  </span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

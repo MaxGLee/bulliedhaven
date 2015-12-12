@@ -1,0 +1,27 @@
+html{
+	overflow-x: hidden;
+}
+#chat {
+	height: 400px !important;
+	overflow-y: auto !important;
+}
+
+.btn-bh{
+	background-color: #26B899;
+	border-color: #2FD6B2;
+	color: #fff;
+}
+
+.btn-bh:hover{
+	background-color: #21A181;
+	border-color: #23A889;
+	color: #fff;
+}
+
+.status{text-align: center;}
+
+.bottom2 {
+	background: #e8e8e8;
+	margin: 0px -7px;
+	padding: 1px 0 20px 0;
+}
