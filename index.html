@@ -1,99 +1,72 @@
 <html ng-app="bulliedHaven">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Bullied Haven - A safe place to be</title>
-	<link rel="stylesheet" href="/assets/theme/css/vendor/all.css">
-	<link rel="stylesheet" href="/assets/theme/css/app/app.css">
-	<!--<link rel="stylesheet" href="/assets/theme/skin-blue.css">
+
+  <meta charset="UTF-8">
+  <title>Bullied Haven | A Safe Place To Be</title>
+  <!-- Latest compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="/assets/theme/css/vendor/all.css">
+  <link rel="stylesheet" href="/assets/theme/css/app/app.css">
+  <!--<link rel="stylesheet" href="/assets/plugins/angular-timeline/dist/angular-timeline.css"/>-->
+  <link rel="stylesheet" href="/assets/plugins/angular-timeline/dist/angular-timeline-bootstrap.css" />
+  <!--<link rel="stylesheet" href="/assets/theme/skin-blue.css">
+  <meta charset="UTF-8">
+  <title>Bullied Haven | A Safe Place To Be</title>
+  <link rel="stylesheet" href="/assets/theme/css/vendor/all.css">
+  <link rel="stylesheet" href="/assets/theme/css/app/app.css">
+  <!--<link rel="stylesheet" href="/assets/theme/skin-blue.css">
 	<link rel="stylesheet" href="/assets/theme/skin-brown.css">
 	<link rel="stylesheet" href="/assets/theme/skin-orange.css">
 	<link rel="stylesheet" href="/assets/theme/skin-purple.css">-->
   <link rel="stylesheet" href="/assets/css/site.css">
-	<link rel="stylesheet" href="/assets/css/theme.css">
+  <link rel="stylesheet" href="/assets/css/theme.css">
+  <link rel="stylesheet" href="/app/main.css">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,700" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
-<!-- Wrapper required for sidebar transitions -->
-  <div class="st-container">
-	<!-- Fixed navbar -->
-    <div class="navbar navbar-main navbar-primary navbar-fixed-top" role="navigation" style="border-bottom: none;">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a href="#sidebar-menu" data-effect="st-effect-1" data-toggle="sidebar-menu" class="toggle pull-left visible-xs"><i class="fa fa-ellipsis-v"></i></a>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="#sidebar-chat" data-toggle="sidebar-menu" data-effect="st-effect-1" class="toggle pull-right visible-xs"><i class="fa fa-comments"></i></a>
-          <a class="navbar-brand" href="#/home">Bullied Haven</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="main-nav">
-          <ul class="nav navbar-nav">
-            <li><a href="#/login">Login</a></li>
-            <li><a href="#/dashboard">Dashboard</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right" style="background-color: #fff;">
-            <li class="hidden-xs">
-              <a href="#sidebar-chat" data-toggle="sidebar-menu" data-effect="st-effect-1">
-                <img src="/assets/img/logo-without.png" style="padding: 10px 0 0 10px; width: 55px !important;"/>
-                <!--<i class="fa fa-comments"></i>-->
-              </a>
-            </li>
-            <!-- User -->
-            <!--<li class="dropdown">
-              <a href="#" class="dropdown-toggle user" data-toggle="dropdown">
-                <img src="images/people/110/guy-5.jpg" alt="Bill" class="img-circle" width="40" /> Bill <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="user-private-profile.html">Profile</a></li>
-                <li><a href="user-private-messages.html">Messages</a></li>
-                <li><a href="login.html">Logout</a></li>
-              </ul>
-            </li>-->
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-    </div>
 
-	<div ui-view style="margin-top:50px;"></div>
-	
-	
-    <!--Closes st-container-->
-	</div>
-    
-    <!-- Footer -->
-    <footer class="footer">
-      <strong>Team RamRod</strong> v0.0.1 &copy; Copyright 2015
-    </footer>
-    <!-- // Footer -->
-	
-	<!--Load Vendor Scripts-->
-	<script src="/assets/theme/js/vendor/all.js"></script>
-	<script src="/assets/plugins/firebase.js"></script>
-	<script src="/assets/plugins/angular.js"></script>
+  <ui-view></ui-view>
+
+
+
+  <!--Load Vendor Scripts-->
+  <script src="/assets/plugins/angular.js"></script>
+  <script src="/assets/theme/js/vendor/all.js"></script>
+  <script src="/assets/plugins/firebase.js"></script>
   <script src="/assets/plugins/scrollglue.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-	<script src="/assets/plugins/angularfire.js"></script>
-	<!--End Vendor Scripts-->
-	
-	<!--Load BulliedHavenApp-->
-	<script src="/app/app.js"></script>
-	
-	<!--Register Services-->
-	<script src="/app/components/services/chatService/chatService.js"></script>
-  <script src="/app/components/services/loginService/loginService.js"></script>
-	
-	<!--Register Controllers-->
-	<script src="/app/components/controllers/home-controller.js"></script>
-	<script src="/app/components/controllers/loginController/loginController.js"></script>
-	<script src="/app/components/controllers/dashboard-controller.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <script src="/assets/plugins/angularfire.js"></script>
+  <script src="/assets/plugins/angular-timeline/dist/angular-timeline.js"></script>
+
+  <!--End Vendor Scripts-->
+
+  <!--Load BulliedHavenApp-->
+  <script src="app/app.js"></script>
+
+  <!--Register Services-->
+  <script src="/app/components/services/chat-service/chat-service.js"></script>
+  <script src="/app/components/services/channel-service/channel-service.js"></script>
+  <script src="/app/components/services/login-service/login-service.js"></script>
+  <script src="/app/components/services/guest-service/guest-service.js"></script>
+  <script src="/app/components/services/user-service/user-service.js"></script>
+  <script src="/app/components/services/login-service/auth-service.js"></script>
+  <script src="/app/components/services/timeline-service/timeline-service.js"></script>
+  <script src="/app/components/services/channel-service/messages-service.js"></script>
+
+  <!--Register Controllers-->
+  <script src="/app/components/controllers/home-controller.js"></script>
+  <script src="/app/components/controllers/auth-controller.js"></script>
+  <script src="/app/components/controllers/channels-controller.js"></script>
+  <script src="/app/components/controllers/dashboard-controller.js"></script>
+  <script src="/app/components/controllers/profile-controller.js"></script>
   <script src="/app/components/controllers/mentor-reg-controller.js"></script>
+  <script src="/app/components/controllers/timeline-controller.js"></script>
+  <script src="/app/components/controllers/messages-controller.js"></script>
+
+
 </body>
 
 </html>
