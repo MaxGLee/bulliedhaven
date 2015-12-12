@@ -1,0 +1,33 @@
+<div class="header row" ng-init="channelsCtrl.hideNews = true;">
+  <h1>{{ messagesCtrl.channelName }}</h1>
+</div>
+
+<div class="clearfix" style="margin-bottom: 8px;" ng-repeat="message in messagesCtrl.messages">
+  <div class="col-sm-1">
+    <img class="user-pic" ng-src="/assets/theme/images/people/110/{{ channelsCtrl.getImg(message.uid) }}" />
+  </div>
+  <div class="col-sm-11">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="user-name">
+          {{ channelsCtrl.getDisplayName(message.uid) }}
+          <span class="timestamp">{{ message.timestamp | date:'short' }}</span>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="message">
+         {{ message.body }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form class="message-form" ng-submit="messagesCtrl.sendMessage()">
+  <div class="input-group">
+    <input type="text" class="form-control" ng-model="messagesCtrl.message" placeholder="Type a message...">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="submit">Send</button>
+    </span>
+  </div>
+</form>

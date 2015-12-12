@@ -1,0 +1,79 @@
+<div class="page-section">
+	<div class="row">
+		<div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+
+			<h4 class="page-section-heading">Mentor Registration</h4>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form ng-submit="submitRegistration(user)">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group form-control-default required">
+									<label for="exampleInputFirstName">First name</label>
+									<input type="name" class="form-control" id="exampleInputFirstName" required="true" placeholder="John" ng-model="user.firstName">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-control-default required">
+									<label for="exampleInputLastName">Last name</label>
+									<input type="name" class="form-control" id="exampleInputLastName" required="true" placeholder="Smith" ng-model="user.lastName">
+								</div>
+							</div>
+						</div>
+						<div class="form-group form-control-default required">
+							<label for="exampleInputEmail1">Username</label>
+							<input type="text" class="form-control" id="exampleInputEmail1" placeholder="jsmith101" ng-model="user.username">
+						</div>
+						<div class="form-group form-control-default required">
+							<label for="exampleInputEmail1">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="jsmith@example.com" ng-model="user.email">
+						</div>
+						<div class="form-group form-control-default required">
+							<label for="exampleInputPassword1">Password</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="*********" ng-model="user.password">
+						</div>
+						<div class="row">
+							<div class="col-md-9">
+								<div class="form-group form-control-default required">
+									<label for="exampleInputPassword1">Date of Birth | MM/DD/YYYY</label>
+									<input type="date" placeholder="10/1/1994" class="form-control" ng-model="user.dob">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group form-control-default">
+									<label for="exampleInputPassword1">Age</label>
+									<input type="text" placeholder="21" class="form-control" ng-model="user.age">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group form-control-default required">
+									<label for="exampleInputPassword1">City</label>
+									<input type="text" class="form-control" placeholder="Springfield" ng-model="user.city">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-control-default required">
+									<label for="exampleInputPassword1">State</label>
+									<input type="text" class="form-control" placeholder="IL" ng-model="user.state">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group form-control-default required">
+									<label for="exampleInputPassword1">Zip</label>
+									<input type="text" class="form-control" placeholder="62705" ng-model="user.zip">
+								</div>
+							</div>
+						</div>
+						<div class="form-group form-control-default required">
+							<label for="exampleInputPassword1">Info</label>
+							<textarea rows="8" type="text" class="form-control" placeholder="Why would you like to be a Mentor?" ng-model="user.info"></textarea>
+						</div>
+						<button type="submit" class="btn btn-primary" ng-click="">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
