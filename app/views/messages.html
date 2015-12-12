@@ -4,7 +4,8 @@
 
 <div class="clearfix" style="margin-bottom: 8px;" ng-repeat="message in messagesCtrl.messages">
   <div class="col-sm-1">
-    <img class="user-pic" ng-src="{{ channelsCtrl.getGravatar(message.uid) }}" />
+    <img class="user-pic" ng-src="/assets/theme/images/people/50/{{messagesCtrl.getRandonImage()}}.jpg" />    
+    <!--<img class="user-pic" ng-src="{{ channelsCtrl.getGravatar(message.uid) }}" />-->
   </div>
   <div class="col-sm-11">
     <div class="row">

@@ -3,30 +3,23 @@
 		<img src="/assets/img/logo.png" alt="Bullied Haven Logo">
 	</div>
 	<div class="col-sm-4 col-sm-offset-4">
-		<a href="" class="btn btn-block btn-bh" style="margin: 20px 0; font-size:large;">Enter as Guest</a>
+		<a href="#/login" class="btn btn-block btn-bh" style="margin: 20px 0; font-size:large;">Enter as Guest</a>
 	</div>
 </section>
 
-<section class="full-width newsletter" style="margin-bottom: 60px;">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6">
-				<h3 class="heading">Join Our Newsletter</h3>
-				<p class="description">Stay up to date with the latest news by subscribing to our newsletter.</p>
-			</div>
-			<div class="col-sm-6">
-				<div class="alert">
-					<button type="button" class="close">×</button>
-					<p></p>
-				</div>
-				<form class="form-inline pull-right">
-					<input type="email" id="email" name="email" placeholder="youremail@domain.com">
-					<input type="button" id="submit" class="btn btn-primary" value="Subscribe Now">
-				</form>
-			</div>
-		</div>
-	</div>
-</section>
+<div class="full-width">
+	<section id="testimonials-section" class="container testimonials flexslider">
+		<h2 class="hide">Testimonial</h2>
+		<ul class="slides">
+			<li style="width: 100%; float: left; margin-right: -100%; position: relative;">
+				<i class="icon-quote-left icon-4x pull-left"></i>
+				<p class="testimonial-content">We can't help everyone, but everyone can help someone.
+					<span class="author">- Ronald Reagan</span>
+				</p>
+			</li>
+		</ul>
+	</section>
+</div>
 
 <!-- begins main content -->
 <div class="main-content">
@@ -72,20 +65,27 @@ The sooner I will marry mule skinner? Baby on her knee soldier's joy lonesome ho
 			</div>
 		</div>
 	</section>
-
-	<div class="full-width">
-		<section id="testimonials-section" class="container testimonials flexslider">
-			<h2 class="hide">Testimonial</h2>
-			<ul class="slides">
-				<li style="width: 100%; float: left; margin-right: -100%; position: relative;">
-					<i class="icon-quote-left icon-4x pull-left"></i>
-					<p class="testimonial-content">We can't help everyone, but everyone can help someone.
-						<span class="author">- Ronald Reagan</span>
-					</p>
-				</li>
-			</ul>
-		</section>
-	</div>
+	
+	<section class="full-width newsletter" style="margin-bottom: 60px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h3 class="heading">Join Our Newsletter</h3>
+					<p class="description">Stay up to date with the latest news by subscribing to our newsletter.</p>
+				</div>
+				<div class="col-sm-6">
+					<div class="alert">
+						<button type="button" class="close">×</button>
+						<p></p>
+					</div>
+					<form class="form-inline pull-right">
+						<input type="email" id="email" name="email" placeholder="youremail@domain.com">
+						<input type="button" id="submit" class="btn btn-primary" value="Subscribe Now">
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<section id="pricing" class="container section pricing">
 		<h2 id="pricing-head" class="heading not-visible">Users</h2>
@@ -104,7 +104,7 @@ The sooner I will marry mule skinner? Baby on her knee soldier's joy lonesome ho
 						No Password<br>
 						</div>
 					
-					<a href="#" class="btn btn-primary">Log In</a>
+					<a href="#/login" class="btn btn-primary">Log In</a>
 				</div>
 			</div>
 			<div class="col-sm-6 pricing-table recommended">
@@ -123,7 +123,7 @@ The sooner I will marry mule skinner? Baby on her knee soldier's joy lonesome ho
 						Get approved<br>
 						Help People in need<br>
 					</div>
-					<a href="#" class="btn btn-primary">Register</a>
+					<a href="#/register" class="btn btn-primary">Register</a>
 				</div>
 			</div>
 		</div>

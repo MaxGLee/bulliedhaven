@@ -225,6 +225,9 @@ body {
   .message-pane{
       width: 80%;
   }
+  .message-form {
+    width: 80%;
+  }
   #twitter-widget-0{
     display: none !important;
     /*position: relative !important;
