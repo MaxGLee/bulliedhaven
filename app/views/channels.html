@@ -1,54 +1,53 @@
-<div class="main">
-  <div class="sidebar">
+<div ng-include="'/app/views/partials/header.html'"></div>
+  <div class="main">
+    <div class="sidebar">
 
-    <div class="site-name">
-      <h2>Bullied Haven</h2>
-    </div>
-
-
-    <div class="channel-list">
-      <div class="list-head">Channels</div>
-      <div class="channel" ng-repeat="channel in channelsCtrl.channels">
-        <a ui-sref="channels.messages({channelId: channel.$id})" ui-sref-active="selected"># {{ channel.name }}</a>
+      <div class="site-name sidebar-block text-center">
+        <img src="/assets/theme/images/people/110/guy-4.jpg" class="img-circle" alt="user profile" />
+        <h4 style="color: #fff;">{{channelsCtrl.profile.displayName}}</h4>
       </div>
-    </div>
 
-    <div class="channel create">
-      <a ui-sref="channels.create">+ create channel</a>
-    </div>
 
-    <div class="list-head">Direct Messages</div>
-    <div class="channel" ng-repeat="user in channelsCtrl.users">
-        <a ng-if="user.$id !== channelsCtrl.profile.$id" ui-sref="channels.private({uid: user.$id})" ui-sref-active="selected">
-          <span class="presence" ng-class="{online: user.online}"></span>
-          {{ user.displayName }}
-        </a>
-    </div>
-
-    <div class="my-info">
-      <div class="user-info">
-        <div class="user-name">
-          <span class="presence" ng-class="{online: channelsCtrl.profile.online}"></span>
-          {{ channelsCtrl.profile.displayName}}
+      <div class="channel-list">
+        <div class="list-head">Channels</div>
+        <div class="channel" ng-repeat="channel in channelsCtrl.channels">
+          <a ui-sref="channels.messages({channelId: channel.$id})" ui-sref-active="selected"># {{ channel.name }}</a>
         </div>
 
-        <div class="options">
-          <a ui-sref="profile">edit profile</a> /
-          <a href="#" ng-click="channelsCtrl.logout()">logout</a>
+        <div class="create channel">
+            <a ui-sref="channels.create">+ create channel</a>
+        </div>
+
+        <div class="list-head">Direct Messages</div>
+        <div class="channel" ng-repeat="user in channelsCtrl.users">
+            <a ng-if="user.$id !== channelsCtrl.profile.$id" ui-sref="channels.private({uid: user.$id})" ui-sref-active="selected">
+              <span class="presence" ng-class="{online: user.online}"></span>
+              {{ user.displayName }}
+            </a>
+        </div>
+
+      </div>
+
+      <div class="my-info">
+        <div class="user-info">
+          <div class="user-name">
+            <span class="presence" ng-class="{online: channelsCtrl.profile.online}"></span>
+            {{ channelsCtrl.profile.displayName}}
+          </div>
+
+          <div class="options">
+            <a ui-sref="profile">edit profile</a> /
+            <a href="#" ng-click="channelsCtrl.logout()">logout</a>
+          </div>
         </div>
       </div>
+
     </div>
 
+    <div class="message-pane" scroll-glue>
+      <ui-view></ui-view>
+    </div>
+    <div ng-controller="TimelineController">
+      <a class="twitter-timeline" href="https://twitter.com/antibullyleader" data-widget-id="673634679698776064">Tweets by @antibullyleader</a>
+    </div>
   </div>
-
-  <div class="message-pane" scroll-glue>
-    <ui-view></ui-view>
-  </div>
-  <div>
-    <span class="twitter-timeline">
-      <a  href="https://twitter.com/antibullyleader" data-widget-id="673634679698776064">Tweets by @antibullyleader</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  </span>
-</div>
-</div>
