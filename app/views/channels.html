@@ -1,7 +1,47 @@
-<div class="panel-heading" style="height: 50px;">
-	<ul class="nav nav-tabs">
-		<li role="presentation" ng-repeat="channel in channels" ng-class="{'active': isActive(channel)}">
-			<a ng-click="changeChannel(channel.name)">{{channel.name}}</a>
-		</li>
-	</ul>
+<div class="main">
+  <div class="sidebar">
+
+    <div class="site-name">
+      <h2>Bullied Haven</h2>
+    </div>
+
+
+    <div class="channel-list">
+      <div class="list-head">Channels</div>
+      <div class="channel" ng-repeat="channel in channelsCtrl.channels">
+        <a ui-sref="channels.messages({channelId: channel.$id})" ui-sref-active="selected"># {{ channel.name }}</a>
+      </div>
+    </div>
+
+    <div class="channel create">
+      <a ui-sref="channels.create">+ create channel</a>
+    </div>
+
+    <div class="list-head">Direct Messages</div>
+    <div class="channel" ng-repeat="user in channelsCtrl.users">
+        <a ng-if="user.$id !== channelsCtrl.profile.$id" ui-sref="channels.private({uid: user.$id})" ui-sref-active="selected">
+          <span class="presence" ng-class="{online: user.online}"></span>
+          {{ user.displayName }}
+        </a>
+    </div>
+
+    <div class="my-info">
+      <div class="user-info">
+        <div class="user-name">
+          <span class="presence" ng-class="{online: channelsCtrl.profile.online}"></span>
+          {{ channelsCtrl.profile.displayName}}
+        </div>
+
+        <div class="options">
+          <a ui-sref="profile">edit profile</a> /
+          <a href="#" ng-click="channelsCtrl.logout()">logout</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="message-pane" scroll-glue>
+    <ui-view></ui-view>
+  </div>
 </div>

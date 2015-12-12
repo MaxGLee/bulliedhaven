@@ -1,9 +1,7 @@
-var app = angular.module('firebaseLogin', []);
-
 app.service('loginService', function (fbConnect, $rootScope) {
 	//Just a reference to the firebase endpoint
 	var firebaseUrl = fbConnect.root;
-	//Creates an object using the Firebase Constructor with our endpoint passed in 
+	//Creates an object using the Firebase Constructor with our endpoint passed in
 	var firebaseLogin = new Firebase(firebaseUrl);
 
 	//login method to be called from our controller. The callback is then passed the authenticated user
@@ -11,14 +9,14 @@ app.service('loginService', function (fbConnect, $rootScope) {
 	this.login = function (user, cb) {
 		firebaseLogin.authWithPassword({
 			username: user.username,
-			email: user.email,    //Email and Password come from our login form 
+			email: user.email,    //Email and Password come from our login form
 			password: user.password
 		}, function (err, authData) {
 
 			if (err) {
 				switch (err.code) {
 					case "INVALID_EMAIL":
-					// handle an invalid email 
+					// handle an invalid email
 					case "INVALID_PASSWORD":
 					// handle an invalid password
 					default:

@@ -1,5 +1,3 @@
-var app = angular.module('firebaseLogin');
-
 app.controller('LoginController', function ($scope, loginService, $state, $window) {
 
   $scope.login = function () {
@@ -32,7 +30,7 @@ app.controller('LoginController', function ($scope, loginService, $state, $windo
     return loginService.anonymousLogin($scope.authData, function (authData) {
 
       $state.go('auth.dashboard')
-      
+
     })
   }
 });

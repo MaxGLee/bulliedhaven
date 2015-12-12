@@ -1,3 +1,7 @@
+<div ng-show="authCtrl.error">
+  <span>{{ authCtrl.error.message }}</span>
+</div>
+
 <div class="container" style="padding: 4em;">
   <div id="content">
     <div class="row">
@@ -6,29 +10,30 @@
         <div class="panel panel-default text-center" style="margin-left:25%;width:50%;">
           <div class="panel-body" style="padding:3em;">
             <form>
-              <span class="login-field">Username</span>
-              <input class="form-control" type="name" placeholder="Username" ng-model="user.username" style="margin-bottom: 1.5em;">
               <span class="login-field">Email</span>
-              <input class="form-control" type="email" placeholder="Email" ng-model="user.email" style="margin-bottom: 1.5em;">
+              <input class="form-control" ng-model="authCtrl.user.email" placeholder="Email" style="margin-bottom: 1.5em;" type="email">
               <span class="login-field">Password</span>
-              <input class="form-control" type="password" placeholder="Password" ng-model="user.password" style="margin-bottom: 1.5em;">
-              <a href="#" ng-click="register()" class="btn btn-primary">Sign Up <i class=""></i></a>
-              <button type="submit" class="btn btn-primary" ng-click="login()" id="login">Login <i class="fa fa-fw fa-unlock-alt"></i>
-                <a href="#"></a>
-              </button>
-              <form>
+              <input class="form-control" ng-model="authCtrl.user.password" placeholder="Password" style="margin-bottom: 1.5em;" type="password">
+              <a class="btn btn-primary" href="#" ng-click="authCtrl.register()">Sign Up
+                <i class=""></i>
+              </a>
+              <a class="btn btn-primary" href="#" ng-click="authCtrl.login()">Login
+                <i class=""></i>
+              </a>
+
+            <form>
                 <div>
 
-                  <a href="#" class="forgot-password">Forgot password?</a>
+                  <a class="forgot-password" href="#">Forgot password?</a>
                   <br>
                   <span>
-                  <a href="#" ng-click="anonymousLogin()"class="guestLogin()">Continue as guest</a>
+                    <a class="guestLogin()" href="#" ng-click="anonymousLogin()">Continue as guest</a>
                   </span>
                 </div>
 
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
